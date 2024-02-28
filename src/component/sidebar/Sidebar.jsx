@@ -15,7 +15,7 @@ const Sidebar = ({ children }) => {
         {children}
         <label
           htmlFor="my-drawer-2"
-          className="btn drawer-button lg:hidden bg-neutral-200 absolute left-4 top-4"
+          className="btn drawer-button lg:hidden bg-neutral-200 fixed left-4 top-4 shadow-lg"
         >
           <IoMenuOutline />
         </label>
