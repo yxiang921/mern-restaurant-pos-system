@@ -1,2 +1,6 @@
 export { default as Sidebar } from "./sidebar/Sidebar"
 export { default as Banner } from "./banner/Banner"
+export { default as LiveOrder } from "./dashboard/LiveOrder"
+export { default as OrderSummary } from "./dashboard/OrderSummary"
+export { default as Purchase } from "./dashboard/Purchase"
+export { default as SummaryCard } from "./dashboard/SummaryCard"
