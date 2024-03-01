@@ -1,7 +1,7 @@
 import { Sidebar } from "./component";
 
 import { Routes, Route } from "react-router-dom";
-import { Home, Order, Menu, Analytics } from "./pages";
+import { Home, Order, Menu, Analytics, SelectTable, NewOrder } from "./pages";
 
 function App() {
   return (
@@ -13,6 +13,8 @@ function App() {
           <Route path="/order" element={<Order />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/analytics" element={<Analytics />} />
+          <Route path="/order/table" element={<SelectTable />} />
+          <Route path="/order/table/new" element={<NewOrder />} />
         </Routes>
       </Sidebar>
     </>

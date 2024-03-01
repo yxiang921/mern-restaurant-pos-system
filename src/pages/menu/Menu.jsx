@@ -1,5 +1,8 @@
 import { MdOutlineEdit } from "react-icons/md";
+import MenuModal from "./MenuModal";
 
+
+// eslint-disable-next-line react/prop-types
 const FoodCard = ({ imagePath, name, price }) => {
   return (
     <div className="w-52 h-52 bg-white rounded-lg shadow-lg m-4 flex flex-col justify-center items-center relative">
@@ -22,7 +25,9 @@ const Menu = () => {
       <div className="rounded-lg w-full overflow-x-auto">
         <div className="w-full h-12 flex flex-row justify-between items-center ">
           <h1 className="text-lg font-bold text-neutral-700">Current Menu</h1>
-          <button className="btn bg-orange-color text-white">Add New</button>
+          <button className="btn bg-orange-color text-white"
+          onClick={() => {document.getElementById("menu_modal").showModal()}}
+          >Add New</button>
         </div>
       </div>
       <div className="w-full h-[35rem] mt-6 flex flex-row justify-start items-start flex-wrap">
@@ -34,6 +39,8 @@ const Menu = () => {
         <FoodCard name={"Chicken Sandwich"} price={9.0} />
         {/* each food card (end) */}
       </div>
+
+      <MenuModal />
     </div>
   );
 };

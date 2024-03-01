@@ -2,7 +2,17 @@ const Order = () => {
   return (
     <div className="w-full h-screen flex justify-center items-center p-6">
       <div className="bg-white rounded-lg shadow-md w-full h-[40rem]">
-        <h1 className="px-10 pt-4 text-lg font-medium text-neutral-700">Order Management</h1>
+        <div className="w-full flex flex-row justify-between items-center relative pt-4">
+          <h1 className="px-10 text-lg font-medium text-neutral-700">
+            Order Management
+          </h1>
+          <a
+            className="btn mr-4 w-1/12 bg-orange-color text-white"
+            href="/order/table"
+          >
+            New
+          </a>
+        </div>
         {/* table start */}
 
         <div className="overflow-x-auto m-6">
