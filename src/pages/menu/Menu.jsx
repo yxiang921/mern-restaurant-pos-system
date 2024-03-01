@@ -1,9 +1,11 @@
 import { MdOutlineEdit } from "react-icons/md";
 
-const FoodCard = ({ imagePath, name, price}) => {
+const FoodCard = ({ imagePath, name, price }) => {
   return (
     <div className="w-52 h-52 bg-white rounded-lg shadow-lg m-4 flex flex-col justify-center items-center relative">
-      <div className="rounded-full w-24 h-24 bg-base-200"></div>
+      <div className="rounded-full w-24 h-24 bg-base-200 flex justify-center items-center">
+        <img src="src/assets/images/burger.png" alt="pic"/>
+      </div>
       <h1 className="text-lg font-bold text-neutral-600 pt-2">{name}</h1>
       <span className="font-medium text-neutral-400">RM{price}</span>
 
@@ -25,11 +27,11 @@ const Menu = () => {
       </div>
       <div className="w-full h-[35rem] mt-6 flex flex-row justify-start items-start flex-wrap">
         {/* each food card (start) */}
-        <FoodCard name={"Chicken Sandwich"} price={9.00}/>
-        <FoodCard name={"Chicken Sandwich"} price={9.00}/>
-        <FoodCard name={"Chicken Sandwich"} price={9.00}/>
-        <FoodCard name={"Chicken Sandwich"} price={9.00}/>
-        <FoodCard name={"Chicken Sandwich"} price={9.00}/>
+        <FoodCard name={"Chicken Sandwich"} price={9.0} />
+        <FoodCard name={"Chicken Sandwich"} price={9.0} />
+        <FoodCard name={"Chicken Sandwich"} price={9.0} />
+        <FoodCard name={"Chicken Sandwich"} price={9.0} />
+        <FoodCard name={"Chicken Sandwich"} price={9.0} />
         {/* each food card (end) */}
       </div>
     </div>
