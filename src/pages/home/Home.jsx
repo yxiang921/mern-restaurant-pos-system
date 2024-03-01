@@ -9,7 +9,7 @@ import { BiFoodMenu } from "react-icons/bi";
 
 const Home = () => {
   return (
-    <div className="w-full h-full flex flex-col justify-center">
+    <div className="w-full h-full flex flex-col justify-start overflow-auto scrollbar-hide">
       <div className="w-full px-8 py-6 flex justify-between items-center flex-wrap">
         <SummaryCard
           icon={<BiFoodMenu />}

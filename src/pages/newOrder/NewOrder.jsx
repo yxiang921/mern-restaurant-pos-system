@@ -1,8 +1,11 @@
+import { useEffect } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa6";
+import { useSidebarContext } from "../../context/SidebarContext";
+
 
 const CategoryCard = () => {
   return (
-    <div className="btn border-none w-80 h-48 m-4 rounded-md bg-sky-500 text-base-300 flex flex-col justify-center items-center">
+    <div className="btn border-none w-80 h-48 m-4 rounded-md bg-purple-500 text-base-300 flex flex-col justify-center items-center">
       <h1 className="font-bold text-2xl">Burger</h1>
       <span className="font-medium text-md text-neutral-200 text-opacity-65">
         3 Items
@@ -13,7 +16,7 @@ const CategoryCard = () => {
 
 const FoodCard = () => {
   return (
-    <div className="border-none w-80 h-48 m-4 p-4 rounded-md bg-sky-500 text-base-300 flex flex-row justify-between items-center">
+    <div className="border-none w-80 h-48 m-4 p-4 rounded-md bg-slate-600 text-base-300 flex flex-row justify-between items-center">
       <div className="w-7/12 h-full text-left flex flex-col justify-between">
         <img src="/src/assets/images/burger.png" alt="Food Picture" />
         <h1 className="font-bold text-lg">Burger Name One</h1>
@@ -35,8 +38,16 @@ const FoodCard = () => {
 };
 
 const NewOrder = () => {
+  const {setIsOrder} = useSidebarContext();
+
+  useEffect(() => {
+    setIsOrder(true);
+
+    return () => {setIsOrder(false)}
+  }, []);
+
   return (
-    <div className="w-full h-auto flex flex-col justify-center items-center p-6">
+    <div className="w-full h-screen flex flex-col justify-start items-center p-6 overflow-auto scrollbar-hide">
       {/* Category Option */}
       <div className="w-full h-full flex justify-start items-start flex-wrap">
         <CategoryCard />
@@ -45,12 +56,7 @@ const NewOrder = () => {
       </div>
 
       {/* Show Each Food */}
-      <div className="w-full h-ful flex justify-start items-start flex-wrap">
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
+      <div className="w-full h-full flex justify-start items-start flex-wrap">
         <FoodCard />
       </div>
     </div>

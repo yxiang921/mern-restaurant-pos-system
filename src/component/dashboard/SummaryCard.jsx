@@ -1,7 +1,12 @@
+import { useEffect } from "react";
+
 // eslint-disable-next-line react/prop-types
 const SummaryCard = ({icon, value, description}) => {
+  useEffect(() => {
+    
+  },[]);
   return (
-    <div className="rounded-lg relative shadow-md mt-6 w-full h-[8.3rem] bg-white-color flex justify-center items-center lg:w-1/4 lg:flex-row">
+    <div className="rounded-lg relative shadow-md mt-6 w-full h-[8.3rem] bg-white-color flex justify-center items-center lg:w-[28%] lg:flex-row">
       <div className="absolute left-4 bg-orange-color bg-opacity-20 rounded-full text-orange-color text-2xl font-semibold w-16 h-16 flex justify-center items-center">
         {icon}
       </div>

@@ -56,7 +56,7 @@ const Order = () => {
                 </td>
                 <td>
                   <div className="bg-yellow-300 bg-opacity-55 h-8 rounded-md flex justify-center items-center">
-                    <span className="font-medium text-yellow-700">
+                    <span className="font-medium text-yellow-700 px-2">
                       Processing
                     </span>
                   </div>
